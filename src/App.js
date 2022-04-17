@@ -10,6 +10,7 @@ import Services from './Components/Pages/Services/Services';
 import SignUp from './Components/Pages/SignUp/SignUp';
 import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
+import NotFound from './Components/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Checkout></Checkout>
           </RequerAuth>
         }></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
