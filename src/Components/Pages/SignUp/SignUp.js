@@ -7,7 +7,6 @@ const SignUp = () => {
     const location = useLocation();
     const redirectLogin = () => {
         navigate('/login' + location.search);
-
     }
     return (
         <div className='container-fluid w-75 mx-auto pt-5'>
