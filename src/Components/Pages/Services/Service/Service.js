@@ -1,10 +1,17 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import { useNavigate } from 'react-router-dom';
 import './Service.css';
 
 const Service = (props) => {
     const { name, image, description, price } = props.service;
     const shoartDescription = description.slice(0, 40) + '...';
+    const navigate = useNavigate();
+    const handleHire = () => {
+        navigate('/checkout');
+
+
+    }
     return (
         <div>
             <Card>
@@ -19,7 +26,7 @@ const Service = (props) => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer className="border-0 bg-transparent text-center">
-                    <button className="hire-button">Hire Now</button>
+                    <button onClick={handleHire} className="hire-button">Hire Now</button>
                 </Card.Footer>
             </Card>
 
