@@ -1,4 +1,4 @@
-input {
+input:not([type=checkbox]) {
     width: 650px;
     height: 50px;
     border-radius: 8px;
@@ -7,7 +7,7 @@ input {
     padding-left: 15px;
 }
 
-label {
+label:not([for=terms]) {
     font-size: 18px;
     margin-left: 185px;
     padding: 5px 0px;

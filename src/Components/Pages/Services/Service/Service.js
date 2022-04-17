@@ -9,8 +9,6 @@ const Service = (props) => {
     const navigate = useNavigate();
     const handleHire = () => {
         navigate('/checkout');
-
-
     }
     return (
         <div>
