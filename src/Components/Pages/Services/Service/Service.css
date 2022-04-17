@@ -1,3 +1,13 @@
 .hire-button {
     padding: 8px 40px;
+    border: 2px solid #f91944;
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.hire-button:hover {
+    color: white;
+    background-color: #f91944;
+
 }
