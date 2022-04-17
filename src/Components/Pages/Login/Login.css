@@ -30,6 +30,12 @@ label {
     border: transparent;
 }
 
+.signup-redirect {
+    background-color: transparent;
+    border: 0;
+    color: tomato;
+}
+
 /* responsive */
 
 @media screen and (max-width:668px) {
