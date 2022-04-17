@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "name":"Birds WildLife",
+        "image":"https://i.ibb.co/2WVFr6F/birds.jpg",
+        "description":"Birds WildLife photgraphy with BettelCam",
+        "price":1500
+    },
+    {
+        "id":2,
+        "name":"Calm Animals WildLife",
+        "image":"https://i.ibb.co/tLG85Nq/pxfuel-com.jpg",
+        "description":"Calm animals WildLife with BettelCam, Camera Traps & Drone Pilot",
+        "price":2000
+    },
+    {
+        "id":3,
+        "name":"Nocturnal WildLife",
+        "image": "https://i.ibb.co/4Ndv9dg/nocturnal.jpg",
+        "description":"Nocturnal WildLife with BettelCam, Camera Traps & Drone Pilot",
+        "price":5000
+    },
+    {
+        "id":4,
+        "name":"Ice Area WildLife",
+        "image":"https://i.ibb.co/VvWtSM6/ice-area.jpg",
+        "description":"Ice Area WildLife photgraphy with BettelCam & Camera Traps",
+        "price":2500
+    },
+    {
+        "id":5,
+        "name":"Deep Sea WildLife",
+        "image":"https://i.ibb.co/2s9XM5g/deep-sea.jpg",
+        "description":"Deep Sea WildLife photgraphy with BettelCam & Camera Traps",
+        "price":4000
+    },
+    {
+        "id":6,
+        "name":"Sea Ice Associated WildLife",
+        "image":"https://i.ibb.co/JBdRWp9/ice.jpg",
+        "description":"Sea Ice Associated WildLife photgraphy with BettelCam & Camera Traps",
+        "price": 5600
+    }
+]
