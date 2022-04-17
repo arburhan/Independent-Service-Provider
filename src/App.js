@@ -1,9 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blogs from './Components/Pages/Blogs/Blogs';
+import Checkout from './Components/Pages/Checkout/Checkout';
 import Contact from './Components/Pages/Contact/Contact';
 import Home from './Components/Pages/Home/Home';
 import Login from './Components/Pages/Login/Login';
+import RequerAuth from './Components/Pages/RequerAuth/RequerAuth';
 import Services from './Components/Pages/Services/Services';
 import SignUp from './Components/Pages/SignUp/SignUp';
 import Footer from './Components/Shared/Footer/Footer';
@@ -21,6 +23,11 @@ function App() {
         <Route path='/services' element={<Services></Services>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/checkout' element={
+          <RequerAuth>
+            <Checkout></Checkout>
+          </RequerAuth>
+        }></Route>
       </Routes>
       <Footer></Footer>
     </div>
