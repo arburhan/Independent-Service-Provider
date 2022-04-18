@@ -20,9 +20,10 @@ const Blogs = () => {
                 <div>
                     <Card className='border-0'>
                         <Card.Body>
-                            <Card.Title><h3>Difference between authorization and authentication</h3></Card.Title>
+                            <Card.Title><h3>Why are you using firebase? What other options do you have to implement authentication?</h3></Card.Title>
                             <Card.Text>
-                                <p><span className='fw-bold'>Answer:</span> </p>
+                                <p><span className='fw-bold'>Answer:</span>1. আমরা যদি আমাদের ওয়েব বা অ্যাাপের অথেনটিকেশন বা অথরাইজেশন নিজে নিজে ম্যানুয়ালি করতে চাই তাহলে এটা কোন ভাবেই সম্ভব হবে না । কারন প্রতিদিন প্রচুর ট্রাফিক হবে । একাজে আমাদের একধাপ এগিয়ে নিয়ে গিয়েছে firebase . এটি আমাদের অথেনটিকেশন এবং অথরাইজেশন এর কাজ সহজ এবং দ্রুত করে দিয়েছে ।
+                                    2. firebase ছাড়াও আরো অনেক ধরনের অথেনটিকেশন প্রভাইডার রয়েছে যেমন ঃ Okta,JSON Web Token,Keycloak,Auth0 etc. </p>
                             </Card.Text>
                         </Card.Body>
                     </Card>
