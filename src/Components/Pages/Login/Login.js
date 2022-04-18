@@ -7,6 +7,7 @@ import Loading from '../../Shared/Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
+import SocialSign from '../../Shared/SocialSign/SocialSign';
 
 
 const Login = () => {
@@ -79,6 +80,7 @@ const Login = () => {
                 </div>
             </div>
             <ToastContainer />
+            <SocialSign></SocialSign>
         </div>
     );
 };
