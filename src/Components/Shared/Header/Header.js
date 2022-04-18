@@ -5,12 +5,17 @@ import Navbar from 'react-bootstrap/Navbar'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
     const handaleLogOut = () => {
         signOut(auth);
+        setTimeout(() => {
+            toast('successfully logout ');
+        }, 1000);
     };
     return (
         <nav>
@@ -33,7 +38,7 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-
+            <ToastContainer />
         </nav>
     );
 };
