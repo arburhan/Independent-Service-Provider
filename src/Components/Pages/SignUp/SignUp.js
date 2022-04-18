@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import Form from 'react-bootstrap/Form';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
@@ -12,6 +12,8 @@ const SignUp = () => {
     const nameRef = useRef('');
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const [updateProfile, updating, profileError] = useUpdateProfile(auth);
+    const [sendEmailVerification, sending] = useSendEmailVerification(auth);
     const redirectLogin = () => {
         navigate('/login' + location.search);
     }
@@ -20,12 +22,21 @@ const SignUp = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { emailVerificationOptions: true });
     const handaleFormSubmit = async (e) => {
         e.preventDefault();
         const userName = nameRef.current.value;
         const userEmail = emailRef.current.value;
         const userPassowrd = passwordRef.current.value;
+        console.log(userEmail, userPassowrd);
+
+        if (agree) {
+            await createUserWithEmailAndPassword(userEmail, userPassowrd);
+            await sendEmailVerification();
+            alert('verify mail sent. Please verify.');
+            navigate('/login');
+            console.log(error);
+        }
     }
 
 
@@ -44,18 +55,22 @@ const SignUp = () => {
                     <label className='d-block text-start' htmlFor="password">Password</label>
                     <input ref={passwordRef} type="password" name="password" id="password" required />
                 </div>
+                <div className='text-center'>
+                    <div className='mt-3'>
+                        <input className='me-2 mb-3' onClick={() => { setAgree(!agree) }} type="checkbox" name="terms" id="terms" />
+                        <label className={user ? 'text-primary' : 'text-danger'} htmlFor="terms">Accept terms and conditions</label>
+                    </div>
+                    <div className=''>
+                        <button disabled={!agree} className='btn submit-btn' type="submit">Register</button>
+                    </div>
+                </div>
             </Form>
-            <div className='text-center'>
-                <div className='mt-3'>
-                    <input className='me-2 mb-3' onClick={() => { setAgree(!agree) }} type="checkbox" name="terms" id="terms" />
-                    <label className={user ? 'text-primary' : 'text-danger'} htmlFor="terms">Accept terms and conditions</label>
-                </div>
-                <div className='py-2'>
-                    Already have an account? <button onClick={redirectLogin} className='signup-redirect'>Please Login</button>
-                </div>
-                <div className=''>
-                    <button className='btn submit-btn'>Register</button>
-                </div>
+
+            <div className='py-2 text-center'>
+                Already have an account? <button onClick={redirectLogin} className='signup-redirect'>Please Login</button>
+            </div>
+            <div>
+
             </div>
         </div>
     );
