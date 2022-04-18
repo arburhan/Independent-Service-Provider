@@ -21,7 +21,7 @@ const Header = () => {
         <nav>
             <Navbar sticky='top' collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand as={CustomLink} to="/home">AR Wild-Grapher</Navbar.Brand>
+                    <Navbar.Brand as={CustomLink} to="/">AR Wild-Grapher</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
