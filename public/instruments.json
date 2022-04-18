@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name":"Bettle_Cam",
+        "image":"https://i.ibb.co/vhpqQkr/bettlecam.jpg",
+        "rating":4.5
+    },
+    {
+        "id":2,
+        "name":"Drone Pilot",
+        "image":"https://i.ibb.co/2nF3hSc/Drone-Cam-2.jpg",
+        "rating":3.5
+    },
+    {
+        "id":3,
+        "name":"Trap_Cam",
+        "image":"https://i.ibb.co/Jp8md9d/Trap-Cam-2.jpg",
+        "rating":4
+    }
+]

@@ -23,7 +23,7 @@
     {
         "id":4,
         "name":"Ice Area WildLife",
-        "image":"https://i.ibb.co/VvWtSM6/ice-area.jpg",
+        "image":"https://i.ibb.co/JBdRWp9/ice.jpg",
         "description":"Ice Area WildLife photgraphy with BettelCam & Camera Traps",
         "price":2500
     },
@@ -37,7 +37,7 @@
     {
         "id":6,
         "name":"Sea Ice Associated WildLife",
-        "image":"https://i.ibb.co/JBdRWp9/ice.jpg",
+        "image":"https://i.ibb.co/VvWtSM6/ice-area.jpg",
         "description":"Sea Ice Associated WildLife photgraphy with BettelCam & Camera Traps",
         "price": 5600
     }

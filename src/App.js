@@ -4,6 +4,7 @@ import Blogs from './Components/Pages/Blogs/Blogs';
 import Checkout from './Components/Pages/Checkout/Checkout';
 import Contact from './Components/Pages/Contact/Contact';
 import Home from './Components/Pages/Home/Home';
+import Instruments from './Components/Pages/Instruments/Instruments';
 import Login from './Components/Pages/Login/Login';
 import RequerAuth from './Components/Pages/RequerAuth/RequerAuth';
 import Services from './Components/Pages/Services/Services';
@@ -25,6 +26,7 @@ function App() {
         <Route path='/services' element={<Services></Services>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/instrument' element={<Instruments></Instruments>}></Route>
         <Route path='/checkout' element={
           <RequerAuth>
             <Checkout></Checkout>
