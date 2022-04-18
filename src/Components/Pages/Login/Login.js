@@ -30,9 +30,11 @@ const Login = () => {
         const userEmail = emailRef.current.value;
         const userPassowrd = passwordRef.current.value;
         signInWithEmailAndPassword(userEmail, userPassowrd);
-        navigate('/home');
+        if (user) {
+            navigate(from, { replace: true });
+        }
         if (loading) {
-            <Loading></Loading>
+            return <Loading></Loading>;
         }
     }
     const forgetPassword = async () => {

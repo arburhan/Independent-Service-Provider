@@ -41,7 +41,7 @@ const SignUp = () => {
             }, 5000);
         }
         if (loading) {
-            <Loading></Loading>
+            return <Loading></Loading>;
         }
     }
 

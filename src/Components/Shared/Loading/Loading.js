@@ -3,8 +3,9 @@ import loading from '../../../images/loading.png';
 const Loading = () => {
     return (
         <div className='container'>
-            <img src={loading} className="img-fluid" alt="" />
-
+            <div className='d-flex align-items-center justify-content-center my-5'>
+                <img src={loading} style={{ height: '200px' }} className="img-fluid" alt="" />
+            </div>
         </div>
     );
 };
