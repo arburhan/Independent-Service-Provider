@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialSign from '../../Shared/SocialSign/SocialSign';
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -79,6 +80,7 @@ const SignUp = () => {
             <div className='py-2 text-center'>
                 Already have an account? <button onClick={redirectLogin} className='signup-redirect'>Please Login</button>
             </div>
+            <SocialSign></SocialSign>
             <ToastContainer />
         </div>
     );

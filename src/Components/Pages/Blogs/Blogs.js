@@ -4,11 +4,11 @@ import Card from 'react-bootstrap/Card';
 
 const Blogs = () => {
     return (
-        <div className='container text-center'>
-            <h2 className='text-danger py-4'>Blogs</h2>
-            <div>
+        <div className='container'>
+            <h2 className='text-danger py-4 text-center'>Blogs</h2>
+            <div className='row row-cols-1 g-4 py-4'>
                 <div>
-                    <Card className='border-0'>
+                    <Card className='border-0 shadow'>
                         <Card.Body>
                             <Card.Title><h3>Difference between authorization and authentication</h3></Card.Title>
                             <Card.Text>
@@ -18,7 +18,7 @@ const Blogs = () => {
                     </Card>
                 </div>
                 <div>
-                    <Card className='border-0'>
+                    <Card className='border-0 shadow'>
                         <Card.Body>
                             <Card.Title><h3>Why are you using firebase? What other options do you have to implement authentication?</h3></Card.Title>
                             <Card.Text>
@@ -29,11 +29,18 @@ const Blogs = () => {
                     </Card>
                 </div>
                 <div>
-                    <Card className='border-0'>
+                    <Card className='border-0 shadow'>
                         <Card.Body>
-                            <Card.Title><h3>Difference between authorization and authentication</h3></Card.Title>
+                            <Card.Title><h3>What other services does firebase provide other than authentication</h3></Card.Title>
                             <Card.Text>
-                                <p><span className='fw-bold'>Answer:</span> </p>
+                                <span className='fw-bold'>Answer:</span>Others services of firebae except authentication:- <br />
+                                <ul className=''>
+                                    <li>Storage</li>
+                                    <li>Hosting</li>
+                                    <li>Realtime Database</li>
+                                    <li>Functions</li>
+                                    <li>Firestore Database</li>
+                                </ul>
                             </Card.Text>
                         </Card.Body>
                     </Card>
