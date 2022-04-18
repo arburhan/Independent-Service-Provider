@@ -23,7 +23,7 @@ const SocialSign = () => {
     }, [googlError])
     useEffect(() => {
         if (googleUser) {
-            navigate(from, { replace: true });
+            navigate('/home');
         }
 
     }, [googleUser])

@@ -12,6 +12,7 @@ const SignUp = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [agree, setAgree] = useState();
+
     // ref kahini:
     const nameRef = useRef('');
     const emailRef = useRef('');
