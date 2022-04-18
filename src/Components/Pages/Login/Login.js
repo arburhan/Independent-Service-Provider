@@ -57,6 +57,7 @@ const Login = () => {
 
     return (
         <div className='container-fluid w-75 mx-auto pt-5'>
+            <h2 className="text-primary py-4 text-center">Login</h2>
             <Form onSubmit={handleLogIn} className='text-center'>
                 <div className='' >
                     <label className='d-block text-start' htmlFor="email">Email</label>

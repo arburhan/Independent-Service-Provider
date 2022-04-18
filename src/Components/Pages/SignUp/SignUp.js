@@ -53,6 +53,7 @@ const SignUp = () => {
 
     return (
         <div className='container-fluid w-75 mx-auto pt-5'>
+            <h2 className="text-primary py-4 text-center">Register</h2>
             <Form onSubmit={handaleFormSubmit} className='text-center'>
                 <div className='' >
                     <label className='d-block text-start' htmlFor="name">Name</label>
