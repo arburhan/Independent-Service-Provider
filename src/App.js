@@ -10,6 +10,7 @@ import Services from './Components/Pages/Services/Services';
 import SignUp from './Components/Pages/SignUp/SignUp';
 import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
+import Loading from './Components/Shared/Loading/Loading';
 import NotFound from './Components/Shared/NotFound/NotFound';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Checkout></Checkout>
           </RequerAuth>
         }></Route>
+        <Route path='/loading' element={<Loading></Loading>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

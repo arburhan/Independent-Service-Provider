@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -36,6 +37,9 @@ const SignUp = () => {
             alert('verify mail sent. Please verify.');
             navigate('/login');
             console.log(error);
+        }
+        if (loading) {
+            <Loading></Loading>
         }
     }
 

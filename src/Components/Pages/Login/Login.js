@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import './Login.css';
 
 const Login = () => {
@@ -26,6 +27,9 @@ const Login = () => {
         const userPassowrd = passwordRef.current.value;
         signInWithEmailAndPassword(userEmail, userPassowrd);
         navigate('/home');
+        if (loading) {
+            <Loading></Loading>
+        }
     }
 
     return (
