@@ -20,6 +20,7 @@ const SignUp = () => {
     const redirectLogin = () => {
         navigate('/login' + location.search);
     }
+    let errorElement;
     const [
         createUserWithEmailAndPassword,
         user,
@@ -44,6 +45,9 @@ const SignUp = () => {
             return <Loading></Loading>;
         }
     }
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
 
 
     return (
@@ -61,6 +65,7 @@ const SignUp = () => {
                     <label className='d-block text-start' htmlFor="password">Password</label>
                     <input ref={passwordRef} type="password" name="password" id="password" required />
                 </div>
+                {errorElement}
                 <div className='text-center'>
                     <div className='mt-3'>
                         <input className='me-2 mb-3' onClick={() => { setAgree(!agree) }} type="checkbox" name="terms" id="terms" />

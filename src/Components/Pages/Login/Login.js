@@ -12,7 +12,7 @@ import './Login.css';
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    let from = location.state?.from?.pathname || '/';
+    let from = location.state?.from?.pathname || "/";
     const redirectRegister = () => {
         navigate('/register' + location.search);
     }
@@ -25,6 +25,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    let errorElement;
     const handleLogIn = e => {
         e.preventDefault();
         const userEmail = emailRef.current.value;
@@ -36,6 +37,9 @@ const Login = () => {
         if (loading) {
             return <Loading></Loading>;
         }
+    }
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
     const forgetPassword = async () => {
         const resetUserMail = emailRef.current.value;
@@ -61,6 +65,7 @@ const Login = () => {
                     <label className='d-block text-start' htmlFor="password">Password</label>
                     <input ref={passwordRef} type="password" name="password" id="password" required />
                 </div>
+                {errorElement}
                 <div className=''>
                     <button type='submit' className='btn submit-btn'>Login</button>
                 </div>
