@@ -9,3 +9,15 @@
 - Answer 3 common question 
 - Secure checkout page
 
+## Website Technologies
+- HTML
+- CSS
+- React.js
+- React Bootstrap
+- React Router
+- React Firebase Hooks
+- React Toast
+- Firebase
+
+
+
