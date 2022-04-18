@@ -4,6 +4,8 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile, useSendEmailVerifi
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -29,14 +31,14 @@ const SignUp = () => {
         const userName = nameRef.current.value;
         const userEmail = emailRef.current.value;
         const userPassowrd = passwordRef.current.value;
-        console.log(userEmail, userPassowrd);
-
         if (agree) {
             await createUserWithEmailAndPassword(userEmail, userPassowrd);
+            toast('verify mail sent. Please verify.');
+            toast('after verify . Please login.');
             await sendEmailVerification();
-            alert('verify mail sent. Please verify.');
-            navigate('/login');
-            console.log(error);
+            setTimeout(() => {
+                navigate('/login');
+            }, 5000);
         }
         if (loading) {
             <Loading></Loading>
@@ -69,13 +71,10 @@ const SignUp = () => {
                     </div>
                 </div>
             </Form>
-
             <div className='py-2 text-center'>
                 Already have an account? <button onClick={redirectLogin} className='signup-redirect'>Please Login</button>
             </div>
-            <div>
-
-            </div>
+            <ToastContainer />
         </div>
     );
 };
