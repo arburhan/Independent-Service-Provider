@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
@@ -13,6 +13,7 @@ const Login = () => {
     const redirectRegister = () => {
         navigate('/register' + location.search);
     }
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const [
@@ -31,6 +32,12 @@ const Login = () => {
             <Loading></Loading>
         }
     }
+    const forgetPassword = async () => {
+        const resetUserMail = emailRef.current.value;
+        sendPasswordResetEmail(resetUserMail);
+
+    }
+
 
     return (
         <div className='container-fluid w-75 mx-auto pt-5'>
@@ -50,6 +57,9 @@ const Login = () => {
             <div className='text-center py-3'>
                 <div>
                     New on AR Wild-Grapher? <button onClick={redirectRegister} className='signup-redirect'>Please Register</button>
+                </div>
+                <div>
+                    Forget password? <button onClick={forgetPassword} className='signup-redirect text-danger'>Reset Here</button>
                 </div>
             </div>
         </div>
