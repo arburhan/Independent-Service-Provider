@@ -7,20 +7,22 @@ const Instrument = ({ instrument }) => {
         console.log('thanks');
     }
     return (
-        <div className='shadow rounded'>
-            <Card className='border-0'>
-                <Card.Img variant="top" className='img-fluid' style={{ height: '200px' }} src={image} />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>
-                        Camera Rating: ${rating}
-                    </Card.Text>
-                </Card.Body>
-                <Card.Footer className="border-0 bg-transparent text-center">
-                    <button onClick={handleDetails} className="details-button">Details</button>
-                </Card.Footer>
-            </Card>
-        </div>
+        <>
+            <div className='rounded'>
+                <Card className='border-0 shadow-sm'>
+                    <Card.Img variant="top" className='img-fluid' style={{ height: '200px' }} src={image} />
+                    <Card.Body>
+                        <Card.Title>{name}</Card.Title>
+                        <Card.Text>
+                            Camera Rating: ${rating}
+                        </Card.Text>
+                    </Card.Body>
+                    <Card.Footer className="border-0 bg-transparent text-center">
+                        <button onClick={handleDetails} className="details-button">Details</button>
+                    </Card.Footer>
+                </Card>
+            </div>
+        </>
     );
 };
 
