@@ -1,10 +1,16 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = () => {
     const [user] = useAuthState(auth);
-    console.log(user)
+    const checkOutSubmit = e => {
+        e.preventDefault();
+        toast.success('Successfully booked');
+
+    }
     return (
         <div className='d-flex justify-content-center my-5'>
             <form>
@@ -25,9 +31,10 @@ const Checkout = () => {
                     <input type="address" class="form-control " id="address" />
                 </div>
                 <div className='text-center'>
-                    <button type="submit" class="btn btn-primary w-75">Submit</button>
+                    <button onClick={checkOutSubmit} type="submit" id='formSubmit' class="btn btn-primary w-75">Submit</button>
                 </div>
             </form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
